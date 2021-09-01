@@ -1,0 +1,31 @@
+<div class="container"> 
+    <p>
+        <a class="addbutton" [routerLink]="['/book/create']">Create book</a>
+    </p>
+
+    <p>
+        <b><i><u>PS: Click the book title for all the details of the book.</u></i></b>
+    </p>
+    <table class="table table-hover"> 
+        <thead>
+            <tr> 
+                <th>Title </th>
+                <th>Author</th>
+                <th>Edition </th>
+                <th>Description</th>
+                <th>Price($)</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <tr *ngFor="let book of bookList">
+                <td><a class="clsDetails" href="javascript:void(0);" (click)="openBookDetails(book._id)">{{book.Title}}</a> </td>
+                <td>{{book.Author}}</td>
+                <td>{{book.bookEdition}}</td>
+                <td>{{book.description}}</td>
+                <td>{{book.price}}</td>
+                <td>{{book.rating}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

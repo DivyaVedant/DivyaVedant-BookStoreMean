@@ -1,0 +1,40 @@
+<div class="section-create">
+    <h2 class="heading-secondary">Edit book details</h2>
+    <div style="color: red;">{{error}}</div>
+    <div class="form">
+        <form>
+            <div class="form-item">
+                <label class="clsLabel" for="Title">Title</label>
+                <input class="form-input" id="Title" type="text" name="Title" placeholder="Title" required="" minlength="3" [(ngModel)]="bookDetail.Title">
+            </div>
+
+            <div class="form-item">
+                <label class="clsLabel" for="Author">Author</label>
+                <input class="form-input" id="Author" type="text" name="Author" placeholder="Author name" required="" [(ngModel)]="bookDetail.Author">
+            </div>
+
+            <div class="form-item">
+                <label class="clsLabel" for="bookEdition">Book Edition</label>
+                <input class="form-input" id="bookEdition" type="text" name="bookEdition" placeholder="bookEdition" required="" [(ngModel)]="bookDetail.bookEdition">
+            </div>
+
+            <div class="form-item">
+                <label class="clsLabel" for="description">Description</label>
+                <input class="form-input" id="description" type="text" name="description" placeholder="description" required="" [(ngModel)]="bookDetail.description">
+            </div>
+
+            <div class="form-item">
+                <label class="clsLabel" for="price">Price($)</label>
+                <input class="form-input" id="price" type="text" name="price" placeholder="price" required="" [(ngModel)]="bookDetail.price">
+            </div>
+
+            <div class="form-item">
+                <label class="clsLabel" for="rating">Rating</label>
+                <input class="form-input" id="rating" type="text" name="rating" placeholder="Rating" required="" [(ngModel)]="bookDetail.rating">
+            </div>
+
+            <input class="addbutton" id="btn" type="submit" value="Submit" (click)="UpdateBookDetails()">
+            <a class="addbutton" href="javascript:void(0);" (click)="openBookDetails()" style="margin-left:8px;">Back</a>
+        </form>
+    </div>
+</div>

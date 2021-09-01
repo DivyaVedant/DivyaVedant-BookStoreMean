@@ -1,0 +1,40 @@
+<div class="container"> 
+    <h2 class="heading-secondary">Book Details</h2>
+    <hr>
+    <div style="color: red;">{{error}}</div>
+    <div >
+        <table class="nostyle">
+            <tbody>
+                <tr> 
+                    <td style="width:20%;"> <b>Title</b></td>
+                    <td>{{ book.Title}}</td>
+                </tr>
+                <tr> 
+                    <td><b>Author</b></td>
+                    <td>{{book.Author}}</td>
+                </tr>
+                <tr> 
+                    <td> <b>Book Edition</b></td>
+                    <td>{{book.bookEdition}}</td>
+                </tr>
+                <tr>
+                    <td> <b>Description</b></td>
+                    <td>{{book.description}}</td>
+                </tr>
+                <tr> 
+                    <td> <b>Price($)</b></td>
+                    <td>{{book.price}}</td>
+                </tr>
+                <tr> 
+                    <td><b>Rating</b></td>
+                    <td>{{book.rating}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <a class="addbutton" href="javascript:void(0)" (click)="openEditBook()">Edit</a>&nbsp;
+            <a class="addbutton" href="javascript:void(0)" (click)="deleteBook()">Delete</a>&nbsp;
+            <a class="addbutton" href="javascript:void(0)" (click)="openBookList()">Back to list</a>&nbsp;
+        </p>
+    </div>
+</div>

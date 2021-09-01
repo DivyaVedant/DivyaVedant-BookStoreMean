@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+  <div class="space">
+     .container 
+        p
+            a.addbutton(href='/new') Create book
+
+        table.table.table-hover 
+            thead
+                tr 
+                    th Title 
+                    th Author
+                    th Edition 
+                    th Description
+                    th Price($)
+                    th Rating
+            tbody 
+            each booklist in books
+                tr 
+                    td 
+                        a.clsDetails(href=`/bookdetails/${booklist._id}`) #{booklist.Title}
+                    td() #{booklist.Author}
+                    td() #{booklist.bookEdition}
+                    td() #{booklist.description}
+                    td() #{booklist.price}
+                    td() #{booklist.rating}
+ 

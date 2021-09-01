@@ -1,0 +1,29 @@
+extends layout
+
+block content 
+    
+    div.section-create
+        h2.heading-secondary= title
+        div.form
+            form(action='' method='POST')
+                .form-item
+                    label.clsLabel(for='Title') Title
+                    input#Title.form-input(type='text' name='Title' placeholder="Title" required minlength="3")
+                .form-item
+                    label.clsLabel(for='Author') Author
+                    input#Author.form-input(type='text' name='Author' placeholder="Author name" required)
+                .form-item
+                    label.clsLabel(for='bookEdition') Book Edition
+                    input#bookEdition.form-input(type='text' name='bookEdition' placeholder="bookEdition" required)
+                .form-item
+                    label.clsLabel(for='description') Description
+                    input#description.form-input(type='text' name='description' placeholder="description" required)
+                .form-item
+                    label.clsLabel(for='price') Price($)
+                    input#price.form-input(type='text' name='price' placeholder="price" required)
+                .form-item
+                    label.clsLabel(for='rating') Rating
+                    input#rating.form-input(type='text' name='rating' placeholder="Rating" required)
+                
+                input#btn.addbutton(type='submit' value='Submit')
+                a.addbutton(href='/list/' style='margin-left:8px;') Back

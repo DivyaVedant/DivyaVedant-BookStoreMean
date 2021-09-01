@@ -1,0 +1,39 @@
+extends layout
+
+block content
+
+  <div class="space">
+     .container 
+        p
+            a.addbutton(href='/list') Back to list
+
+        div.section-create
+        h2.heading-secondary Book Details
+        hr
+        div
+            table.nostyle
+                tr 
+                    td(style="width:20%;") 
+                        b Title
+                    td #{currentBook.Title}
+                tr 
+                    td 
+                        b Author
+                    td #{currentBook.Author}
+                tr 
+                    td 
+                        b Book Edition
+                    td #{currentBook.bookEdition}
+                tr
+                    td 
+                        b Description
+                    td #{currentBook.description}
+                tr 
+                    td 
+                        b Price($)
+                    td #{currentBook.price}
+                tr 
+                    td 
+                        b Rating
+                    td #{currentBook.rating}
+
